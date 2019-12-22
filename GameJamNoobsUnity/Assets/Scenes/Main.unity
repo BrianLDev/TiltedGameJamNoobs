@@ -2891,12 +2891,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -3631,7 +3631,7 @@ PrefabInstance:
     - target: {fileID: 8332113214958818880, guid: c2a8da1b5895b4f6ba699affa82d6576,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.15
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8332113214958818880, guid: c2a8da1b5895b4f6ba699affa82d6576,
         type: 3}
