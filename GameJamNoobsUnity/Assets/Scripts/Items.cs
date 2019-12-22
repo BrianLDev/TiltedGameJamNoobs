@@ -27,7 +27,6 @@ public class Items : MonoBehaviour
         if (col.gameObject.tag == "Player") {
             fxPrefab.SetActive(true);
             GameObject fxCollect = Instantiate(fxPrefab, itemTfm.position, Quaternion.identity);
-            // fxCollect.SetActive(true);
             Destroy(this.gameObject);
         }
 

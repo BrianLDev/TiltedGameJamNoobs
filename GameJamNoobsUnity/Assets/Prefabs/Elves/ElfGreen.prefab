@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3480239616926546424}
   - component: {fileID: 3480239616926546427}
   - component: {fileID: 3480239616926546426}
+  - component: {fileID: -3782286670363092025}
   m_Layer: 9
   m_Name: ElfGreen
   m_TagString: Untagged
@@ -129,3 +130,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.16, y: 9.18}
   m_EdgeRadius: 0
+--- !u!114 &-3782286670363092025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3480239616926546428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e3799d75de445c2a8b465a8822c3d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
