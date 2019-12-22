@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3480239616926546427}
   - component: {fileID: 3480239616926546426}
   m_Layer: 9
-  m_Name: Elf
+  m_Name: ElfGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3480239616926546428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.15, y: -3.06, z: 0}
-  m_LocalScale: {x: 0.11, y: 0.11, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -127,5 +127,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.16, y: 9.84}
+  m_Size: {x: 7.16, y: 9.18}
   m_EdgeRadius: 0
