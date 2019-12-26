@@ -111,3 +111,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.07
+  fxPrefab: {fileID: 144926, guid: fcb242a204cb73e46bb764583d0bf1fa, type: 3}

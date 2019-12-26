@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 7158312}
   m_Layer: 2
   m_Name: Fir1
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89433c6531eb48e448084d6941f092ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.002
+  speed: 0.0019
 --- !u!1 &29573358
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,9 +213,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 29573359}
+  - component: {fileID: 29573360}
   m_Layer: 10
   m_Name: --ITEMS--
-  m_TagString: Untagged
+  m_TagString: Items
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -243,6 +244,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &29573360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29573358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93ac230db0317324a81b1254d11b90b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab:
+  - {fileID: 8783563698630906076, guid: 474fff3d945e7495699e017ef3cba3dc, type: 3}
+  - {fileID: 8783563698630906076, guid: 714303dc328c14fdd9572915f32021eb, type: 3}
+  - {fileID: 8783563698630906076, guid: d2ac73c23e54a4efaa240358ac1e4145, type: 3}
+  - {fileID: 8783563698630906076, guid: 9366145110eb44f609439f2b1ae167b7, type: 3}
+  - {fileID: 8783563698630906076, guid: 356bda290118d4d74bfcbe212fac19d7, type: 3}
+  - {fileID: 8783563698630906076, guid: 90a6cf7608a744c87a77e21e0eaa9820, type: 3}
+  - {fileID: 8783563698630906076, guid: 02f208ffbd74d49de90f0c06a35bdbc6, type: 3}
+  - {fileID: 8783563698630906076, guid: 3b8a34b50d0ca4ea19f2071073bb7de8, type: 3}
+  poisonPrefab: {fileID: 8783563698630906076, guid: 3458e5739ed614bc4b37ee5e4e3af087,
+    type: 3}
 --- !u!1 &112530620
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +280,7 @@ GameObject:
   - component: {fileID: 112530621}
   m_Layer: 0
   m_Name: EventSystem
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -320,6 +344,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: poison
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783563698630906076, guid: 3458e5739ed614bc4b37ee5e4e3af087,
+        type: 3}
+      propertyPath: m_TagString
+      value: Items
       objectReference: {fileID: 0}
     - target: {fileID: 8783563698630906078, guid: 3458e5739ed614bc4b37ee5e4e3af087,
         type: 3}
@@ -400,11 +429,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElfRed
       objectReference: {fileID: 0}
-    - target: {fileID: 3480239616926546428, guid: 60398b36bb48048868845f2e4a25063e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Elves
-      objectReference: {fileID: 0}
     - target: {fileID: 3480239616926546429, guid: 60398b36bb48048868845f2e4a25063e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -473,6 +497,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: banana
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783563698630906076, guid: 714303dc328c14fdd9572915f32021eb,
+        type: 3}
+      propertyPath: m_TagString
+      value: Items
       objectReference: {fileID: 0}
     - target: {fileID: 8783563698630906078, guid: 714303dc328c14fdd9572915f32021eb,
         type: 3}
@@ -555,7 +584,7 @@ GameObject:
   - component: {fileID: 178997412}
   m_Layer: 2
   m_Name: Fog3
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -624,7 +653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89433c6531eb48e448084d6941f092ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.001
+  speed: 0.0012
 --- !u!1001 &206614363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -636,6 +665,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: earth 1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023244200883587474, guid: 537efc21c204d4f2a8f857f78c94529c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 6023244200883587485, guid: 537efc21c204d4f2a8f857f78c94529c,
         type: 3}
@@ -756,6 +790,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: eggsunny
       objectReference: {fileID: 0}
+    - target: {fileID: 8783563698630906076, guid: 90a6cf7608a744c87a77e21e0eaa9820,
+        type: 3}
+      propertyPath: m_TagString
+      value: Items
+      objectReference: {fileID: 0}
     - target: {fileID: 8783563698630906078, guid: 90a6cf7608a744c87a77e21e0eaa9820,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -827,7 +866,7 @@ GameObject:
   - component: {fileID: 213259268}
   m_Layer: 2
   m_Name: Sky
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -896,7 +935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89433c6531eb48e448084d6941f092ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 0.0001
 --- !u!1001 &225641577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -908,6 +947,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: candy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783563698630906076, guid: d2ac73c23e54a4efaa240358ac1e4145,
+        type: 3}
+      propertyPath: m_TagString
+      value: Items
       objectReference: {fileID: 0}
     - target: {fileID: 8783563698630906078, guid: d2ac73c23e54a4efaa240358ac1e4145,
         type: 3}
@@ -991,7 +1035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 157776, guid: 82bf03917e16d3d4cad30518cca28308, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 157776, guid: 82bf03917e16d3d4cad30518cca28308, type: 3}
       propertyPath: m_Layer
@@ -1066,6 +1110,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: onion
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783563698630906076, guid: 02f208ffbd74d49de90f0c06a35bdbc6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Items
       objectReference: {fileID: 0}
     - target: {fileID: 8783563698630906078, guid: 02f208ffbd74d49de90f0c06a35bdbc6,
         type: 3}
@@ -1145,6 +1194,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: chicken
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783563698630906076, guid: 9366145110eb44f609439f2b1ae167b7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Items
       objectReference: {fileID: 0}
     - target: {fileID: 8783563698630906078, guid: 9366145110eb44f609439f2b1ae167b7,
         type: 3}
@@ -1229,7 +1283,7 @@ GameObject:
   - component: {fileID: 436977155}
   m_Layer: 2
   m_Name: Stars
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1265,7 +1319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89433c6531eb48e448084d6941f092ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 0.0001
 --- !u!114 &436977156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1322,6 +1376,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: earth 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023244200883587474, guid: 537efc21c204d4f2a8f857f78c94529c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 6023244200883587485, guid: 537efc21c204d4f2a8f857f78c94529c,
         type: 3}
@@ -1460,6 +1519,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: earth 1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6023244200883587474, guid: 537efc21c204d4f2a8f857f78c94529c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     - target: {fileID: 6023244200883587485, guid: 537efc21c204d4f2a8f857f78c94529c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1587,7 +1651,7 @@ GameObject:
   - component: {fileID: 699758078}
   m_Layer: 2
   m_Name: Mountains3
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1656,7 +1720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89433c6531eb48e448084d6941f092ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.0001
+  speed: 0.0005
 --- !u!4 &723037666 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 433870, guid: fcb242a204cb73e46bb764583d0bf1fa,
@@ -1707,6 +1771,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pie
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783563698630906076, guid: 3b8a34b50d0ca4ea19f2071073bb7de8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Items
       objectReference: {fileID: 0}
     - target: {fileID: 8783563698630906078, guid: 3b8a34b50d0ca4ea19f2071073bb7de8,
         type: 3}
@@ -1942,7 +2011,7 @@ GameObject:
   - component: {fileID: 1194384829}
   m_Layer: 9
   m_Name: --SANTA--
-  m_TagString: Untagged
+  m_TagString: Santa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1994,7 +2063,7 @@ GameObject:
   - component: {fileID: 1320478549}
   m_Layer: 2
   m_Name: Mountains1
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2063,7 +2132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89433c6531eb48e448084d6941f092ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.0012
+  speed: 0.0014
 --- !u!1 &1334866284
 GameObject:
   m_ObjectHideFlags: 0
@@ -2109,6 +2178,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: coffee
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783563698630906076, guid: 356bda290118d4d74bfcbe212fac19d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Items
       objectReference: {fileID: 0}
     - target: {fileID: 8783563698630906078, guid: 356bda290118d4d74bfcbe212fac19d7,
         type: 3}
@@ -2197,7 +2271,7 @@ GameObject:
   - component: {fileID: 1458018865}
   m_Layer: 2
   m_Name: Fog1
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2266,7 +2340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89433c6531eb48e448084d6941f092ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.0015
+  speed: 0.0016
 --- !u!1 &1500518838
 GameObject:
   m_ObjectHideFlags: 0
@@ -2281,7 +2355,7 @@ GameObject:
   - component: {fileID: 1500518842}
   m_Layer: 2
   m_Name: Fog2
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2350,7 +2424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89433c6531eb48e448084d6941f092ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.0015
+  speed: 0.0018
 --- !u!1001 &1517035476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2364,7 +2438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 144926, guid: fcb242a204cb73e46bb764583d0bf1fa, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 144926, guid: fcb242a204cb73e46bb764583d0bf1fa, type: 3}
       propertyPath: m_Layer
@@ -2448,11 +2522,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElfGirl
       objectReference: {fileID: 0}
-    - target: {fileID: 3480239616926546428, guid: fd991e27b7c8e4c4a81c897e0735550f,
-        type: 3}
-      propertyPath: m_TagString
-      value: Elves
-      objectReference: {fileID: 0}
     - target: {fileID: 3480239616926546429, guid: fd991e27b7c8e4c4a81c897e0735550f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2523,7 +2592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 151244, guid: 8368975de5593844bbfaf74e342fb326, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 151244, guid: 8368975de5593844bbfaf74e342fb326, type: 3}
       propertyPath: m_Layer
@@ -2618,7 +2687,7 @@ GameObject:
   - component: {fileID: 1801842460}
   m_Layer: 8
   m_Name: --TERRAIN--
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2658,7 +2727,7 @@ GameObject:
   - component: {fileID: 1929459702}
   m_Layer: 2
   m_Name: Mountains2
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2727,7 +2796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89433c6531eb48e448084d6941f092ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.0007
+  speed: 0.001
 --- !u!1 &1987396151
 GameObject:
   m_ObjectHideFlags: 0
@@ -2742,7 +2811,7 @@ GameObject:
   - component: {fileID: 1987396155}
   m_Layer: 2
   m_Name: Fir2
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2811,7 +2880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89433c6531eb48e448084d6941f092ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.0024
+  speed: 0.0021
 --- !u!1001 &2008627806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2829,7 +2898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 195900, guid: ec61825cb06be72419bb09eee03af08c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 195900, guid: ec61825cb06be72419bb09eee03af08c, type: 3}
       propertyPath: m_Layer
@@ -2909,7 +2978,7 @@ GameObject:
   - component: {fileID: 2140665594}
   m_Layer: 2
   m_Name: Clouds
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2978,7 +3047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89433c6531eb48e448084d6941f092ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.0005
+  speed: 0.0008
 --- !u!1 &2143035413
 GameObject:
   m_ObjectHideFlags: 0
@@ -2993,7 +3062,7 @@ GameObject:
   - component: {fileID: 2143035414}
   m_Layer: 2
   m_Name: ParallaxBackground
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3099,6 +3168,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: earth 1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 826356397041633816, guid: 28688841443204e9e802376fa1a4372f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 826356397041633817, guid: 28688841443204e9e802376fa1a4372f,
         type: 3}
@@ -3324,6 +3398,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: earth 1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1250783844311744287, guid: 239a325af999f4710a5991c1026e5edf,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 239a325af999f4710a5991c1026e5edf, type: 3}
 --- !u!1001 &3480239617697285134
@@ -3337,11 +3416,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ElfGreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 3480239616926546428, guid: 752e79ca4dc314d8b8f54ace05ba069e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Elves
       objectReference: {fileID: 0}
     - target: {fileID: 3480239616926546429, guid: 752e79ca4dc314d8b8f54ace05ba069e,
         type: 3}
@@ -3411,6 +3485,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: earth 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023244200883587474, guid: 537efc21c204d4f2a8f857f78c94529c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 6023244200883587485, guid: 537efc21c204d4f2a8f857f78c94529c,
         type: 3}
@@ -3536,6 +3615,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 6502646895770333508, guid: 7aa16fc44966b4cf4a0d0e42798d3f67,
+        type: 3}
+      propertyPath: m_TagString
+      value: Santa
+      objectReference: {fileID: 0}
     - target: {fileID: 6502646895770333509, guid: 7aa16fc44966b4cf4a0d0e42798d3f67,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3611,6 +3695,11 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 0.64
       objectReference: {fileID: 0}
+    - target: {fileID: 6502646895770333511, guid: 7aa16fc44966b4cf4a0d0e42798d3f67,
+        type: 3}
+      propertyPath: m_Mass
+      value: 23.043598
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aa16fc44966b4cf4a0d0e42798d3f67, type: 3}
 --- !u!1001 &6966734096527007353
@@ -3624,6 +3713,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: earth 1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966734096122886064, guid: f152cc30457e446598fd44330ed6eccf,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 6966734096122886067, guid: f152cc30457e446598fd44330ed6eccf,
         type: 3}
@@ -3739,36 +3833,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 786070507}
     m_Modifications:
-    - target: {fileID: 1477866515948514095, guid: c2a8da1b5895b4f6ba699affa82d6576,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3831691762863847339, guid: c2a8da1b5895b4f6ba699affa82d6576,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8332113213863273925, guid: c2a8da1b5895b4f6ba699affa82d6576,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8332113213863273926, guid: c2a8da1b5895b4f6ba699affa82d6576,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 8332113214588101484, guid: c2a8da1b5895b4f6ba699affa82d6576,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8332113214588101485, guid: c2a8da1b5895b4f6ba699affa82d6576,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 8332113214958818880, guid: c2a8da1b5895b4f6ba699affa82d6576,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3829,161 +3893,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rudolph
       objectReference: {fileID: 0}
-    - target: {fileID: 8332113214958818881, guid: c2a8da1b5895b4f6ba699affa82d6576,
+    - target: {fileID: 8397659329611184517, guid: c2a8da1b5895b4f6ba699affa82d6576,
         type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 8332113214958818881, guid: c2a8da1b5895b4f6ba699affa82d6576,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8332113214958818884, guid: c2a8da1b5895b4f6ba699affa82d6576,
-        type: 3}
-      propertyPath: speed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8332113214958818884, guid: c2a8da1b5895b4f6ba699affa82d6576,
-        type: 3}
-      propertyPath: drag
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8332113214958818884, guid: c2a8da1b5895b4f6ba699affa82d6576,
-        type: 3}
-      propertyPath: accel
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8332113214958818886, guid: c2a8da1b5895b4f6ba699affa82d6576,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8332113214958818886, guid: c2a8da1b5895b4f6ba699affa82d6576,
-        type: 3}
-      propertyPath: m_Mass
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8332113214958818887, guid: c2a8da1b5895b4f6ba699affa82d6576,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 878705833}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2a8da1b5895b4f6ba699affa82d6576, type: 3}
---- !u!1 &8332113215606886996 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8332113214958818881, guid: c2a8da1b5895b4f6ba699affa82d6576,
-    type: 3}
-  m_PrefabInstance: {fileID: 8332113215606886995}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8332113215606886997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8332113215606886996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: aeb182d3dc209904f92a72c51580fe19,
-    type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8332113215606886998}
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 115f9230-a4b7-4f79-8342-da82e63ccaa4
-    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a3e8ad06-249a-49d3-beb7-deccaa62b197
-    m_ActionName: Player/Look[/Mouse/delta]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a0f1472d-b26c-4ece-82a1-72c6b9bc75ea
-    m_ActionName: Player/Fire[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: af054735-7b7f-4a6f-99f7-86204a43cce5
-    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 77aacdc9-10cc-414e-b7e5-66d6148cbf23
-    m_ActionName: UI/Submit[/Keyboard/enter]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 35bee479-8a4b-4b32-bc3c-0d4dee1bf913
-    m_ActionName: UI/Cancel[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 29cc2e9f-d919-49f2-b06c-1128f2f4ec36
-    m_ActionName: UI/Point[/Mouse/position]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c31003cb-eee0-4cf0-9871-e5afe87b9951
-    m_ActionName: UI/Click[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 36a12506-c77c-4d9d-b64f-c4ca3065a5b2
-    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 47c30085-fc3b-4c32-acdc-3c7f6a7663e3
-    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 402898f1-624b-4535-9743-499816830c43
-    m_ActionName: UI/RightClick[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 072a2f23-20c2-4536-bf4d-bf62534ac3c0
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 05cd15f9-1a18-40ec-872a-5736755a0d8f
-    m_ActionName: UI/TrackedDeviceOrientation
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 07bde483-b5aa-40b0-bc6e-ab3a77576106
-    m_ActionName: UI/TrackedDeviceSelect
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 878705833}
---- !u!114 &8332113215606886998 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8332113214958818884, guid: c2a8da1b5895b4f6ba699affa82d6576,
-    type: 3}
-  m_PrefabInstance: {fileID: 8332113215606886995}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8332113215606886996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b19e9bfb5d5794d2d9308c068fe9ec71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &8783563699396495429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4004,6 +3920,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783563698630906076, guid: 474fff3d945e7495699e017ef3cba3dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Items
       objectReference: {fileID: 0}
     - target: {fileID: 8783563698630906078, guid: 474fff3d945e7495699e017ef3cba3dc,
         type: 3}

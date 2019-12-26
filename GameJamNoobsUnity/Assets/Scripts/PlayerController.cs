@@ -5,11 +5,6 @@ using UnityEngine.InputSystem;  // new unity namespace for consolidated input ha
 
 public class PlayerController : MonoBehaviour
 {
-    // MyPlayerControls is the C# class that Unity generated.
-    // It encapsulates the data from the .inputactions asset we created
-    // and automatically looks up all the maps and actions for us.
-    // MyPlayerControls controls;
-
     public float accel = 2f;
     public float drag = 0.2f;    
 
@@ -31,7 +26,6 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context) {
         // 'Move' code here.
         Debug.Log(context);
-        
     }
 
     // Update is called once per frame
@@ -49,32 +43,16 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        var gamepad = Gamepad.current;
-
-        if (gamepad == null)
-            return;     // no gamepad connected
-
-        if (gamepad.rightTrigger.wasPressedThisFrame) {
-            // 'Use' code here
-        }
-
-        Vector2 move = gamepad.leftStick.ReadValue();
-        // 'Move' code here
-
         if (movingUp) {
-            Debug.Log("Up");
             rb2d.velocity += (Vector2.up * accel);
         }
         if (movingDown) {
-            Debug.Log("Down");
             rb2d.velocity += (Vector2.down * accel);
         }
         else if (movingLeft) {
-            Debug.Log("Left");
             rb2d.velocity += (Vector2.left * accel);
         }
         else if (movingRight) {
-            Debug.Log("Right");
             rb2d.velocity += (Vector2.right * accel);
         }
     }
