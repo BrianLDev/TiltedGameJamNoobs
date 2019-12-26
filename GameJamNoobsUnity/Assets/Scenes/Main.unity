@@ -3859,6 +3859,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8332113214958818886, guid: c2a8da1b5895b4f6ba699affa82d6576,
+        type: 3}
+      propertyPath: m_Mass
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8332113214958818887, guid: c2a8da1b5895b4f6ba699affa82d6576,
         type: 3}
       propertyPath: m_IsTrigger
