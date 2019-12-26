@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Elves : MonoBehaviour
 {
-    public float speed = 0.06f;      // default to 0.06
+    public float speed = 2f;      // default to 2
     public GameObject fxPrefab;
 
     private Rigidbody2D rb2D;
+    private Vector2 forceToAdd;
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +19,12 @@ public class Elves : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 moveSpd = new Vector3(-speed,0,0);
-        // rb2D.Translate(moveSpd);
-        
+        if(Random.Range(0,100) <= 2) {
+            // xx% of the time, change the force and direction velocity of the elf to simulate moving running, jogging, slowing down
+            speed = Random.Range(-1f, 1f) * 3;  
+            forceToAdd = new Vector2(speed, 0);
+        }
+        rb2D.AddForce(forceToAdd);
     }
 
     void OnCollisionEnter2D(Collision2D coll) {
@@ -28,7 +32,6 @@ public class Elves : MonoBehaviour
             Instantiate(fxPrefab, this.transform.position, Quaternion.identity);
             Destroy(fxPrefab, 3f);     // kill off the effect after 3 seconds
             Destroy(this.gameObject);
-            Debug.Log("Destroyed elf!");
         }
     }
 }

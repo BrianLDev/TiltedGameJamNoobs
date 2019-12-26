@@ -39,6 +39,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.S) ) {  movingDown = false;  }
         if (Input.GetKeyUp(KeyCode.A) ) {  movingLeft = false;  }
         if (Input.GetKeyUp(KeyCode.D) ) {  movingRight = false;  }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Debug.Log("Quitting");
+            Application.Quit();
+        }
     }
 
     void FixedUpdate()
