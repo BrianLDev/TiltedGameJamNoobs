@@ -18,8 +18,12 @@ public class TerrainMover : MonoBehaviour
     {
         Vector3 moveSpd = new Vector3(-speed,0,0);
         terrain.Translate(moveSpd);
-        if (terrain.position.x < -12) {
-            terrain.position = new Vector2(terrain.position.x + (terrain.rect.width * 6), terrain.position.y);
+        if (terrain.position.x < -15) {
+            terrain.position = new Vector2(terrain.position.x + (terrain.rect.width * 7) - 0.1f, terrain.position.y);
         }
+    }
+
+    public void FixedUpdate() {
+
     }
 }
