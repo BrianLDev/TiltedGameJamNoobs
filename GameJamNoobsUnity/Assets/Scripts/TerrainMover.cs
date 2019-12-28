@@ -15,7 +15,7 @@ public class TerrainMover : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 moveSpd = new Vector3(-speed,0,0);
         terrain.Translate(moveSpd);
@@ -24,7 +24,4 @@ public class TerrainMover : MonoBehaviour
         }
     }
 
-    public void FixedUpdate() {
-
-    }
 }

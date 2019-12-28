@@ -17,6 +17,10 @@ public class BackgroundHelper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    }
+
+    void FixedUpdate() {
         pos += speed;
 
         if (pos > 1.0F)

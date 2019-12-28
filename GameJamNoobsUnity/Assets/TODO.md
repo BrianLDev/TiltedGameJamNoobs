@@ -2,13 +2,10 @@
 
 ## 1st Release
 
-- Change elf dynamic so you have to push them away from santa (make it work when coming from top too)
 - Make elf scared when close to santa
-- Santa eats candy mechanic
 - Santa eats elves mechanic
-- Create Santa fatness mechanic
 - Create health mechanic
-- Create Score
+- Create Score UI
 - Create game over screen
 - Create start game UI
 - Randomize terrain signs

@@ -18,6 +18,10 @@ public class Items : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    }
+
+    void FixedUpdate() {
         Vector3 newLoc = new Vector3(-speed,0,0);
         itemTfm.Translate(newLoc);
     }
