@@ -22,16 +22,19 @@ public class Elves : MonoBehaviour
         if(Random.Range(0,100) <= 2) {
             // xx% of the time, change the force and direction velocity of the elf to simulate moving running, jogging, slowing down
             speed = Random.Range(-1f, 0.5f) * 2.25f;  
-            forceToAdd = new Vector2(speed, 0);
+            forceToAdd = new Vector2(speed, 0f);
         }
         rb2D.AddForce(forceToAdd);
     }
 
     void OnCollisionEnter2D(Collision2D coll) {
-        // if (coll.collider.tag == "Player") {
-        //     Instantiate(fxPrefab, this.transform.position, Quaternion.identity);
-        //     Destroy(fxPrefab, 3f);     // kill off the effect after 3 seconds
-        //     Destroy(this.gameObject);
-        // }
+        if (coll.collider.tag == "Player") {
+            // Instantiate(fxPrefab, this.transform.position, Quaternion.identity);
+            // Destroy(fxPrefab, 3f);     // kill off the effect after 3 seconds
+            // Destroy(this.gameObject);
+
+            Vector2 nudge = new Vector2 (15f, 40f);
+            rb2D.AddForce(nudge);
+        }
     }
 }

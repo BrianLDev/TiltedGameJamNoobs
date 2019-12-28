@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8350786939250445371}
   m_Layer: 0
   m_Name: poison
-  m_TagString: Items
+  m_TagString: Poison
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
