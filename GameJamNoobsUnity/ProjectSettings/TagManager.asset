@@ -8,6 +8,7 @@ TagManager:
   - Elves
   - Santa
   - Items
+  - Poison
   layers:
   - Default
   - TransparentFX

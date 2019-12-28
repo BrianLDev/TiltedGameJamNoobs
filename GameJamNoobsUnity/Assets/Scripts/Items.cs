@@ -23,12 +23,9 @@ public class Items : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D col) {
-        if (col.gameObject.tag == "Player") {
-            fxPrefab = Instantiate(fxPrefab, itemTfm.position, Quaternion.identity);
-            Destroy(this.gameObject);
-            Destroy(fxPrefab, 3f);     // Destroy the fx gameObject after 3 seconds
-        }
-
+        fxPrefab = Instantiate(fxPrefab, itemTfm.position, Quaternion.identity);
+        Destroy(this.gameObject);
+        Destroy(fxPrefab, 3f);     // Destroy the fx gameObject after 3 seconds
     }
 
     void OnBecameInvisible() {
