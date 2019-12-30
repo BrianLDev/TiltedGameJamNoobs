@@ -4,22 +4,36 @@ using UnityEngine;
 
 public class Elves : MonoBehaviour
 {
-    public float speed = 2f;      // default to 2
+    public float speed = 2f;
+    public float scaredDist = 6f;
     public GameObject fxPrefab;
+    public GameObject santa;
 
+    private Animator animator;
     private Rigidbody2D rb2D;
     private Vector2 forceToAdd;
+    private float distFromSanta;
 
     // Start is called before the first frame update
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        distFromSanta = Mathf.Abs(this.transform.position.x - (santa.transform.position.x * santa.transform.localScale.x));
+        
+        if (distFromSanta <=scaredDist && animator.GetBool("scared") == false) {
+            Debug.Log("AHHHH!");
+            animator.SetBool("scared", true);
+        }
+        else if (distFromSanta >= scaredDist && animator.GetBool("scared") == true) {
+            Debug.Log("Phew...");
+            animator.SetBool("scared", false);
+        }
     }
     
     void FixedUpdate() {
@@ -33,6 +47,7 @@ public class Elves : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D coll) {
         if (coll.collider.tag == "Player") {
+            // NOTE: This block of code was used for gameplay if the elves are "collected" when rudolph hits them.  Trying out something different now but keep this in case I want to go back.
             // Instantiate(fxPrefab, this.transform.position, Quaternion.identity);
             // Destroy(fxPrefab, 3f);     // kill off the effect after 3 seconds
             // Destroy(this.gameObject);

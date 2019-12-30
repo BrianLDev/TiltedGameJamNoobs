@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3480239616926546427}
   - component: {fileID: 3480239616926546426}
   - component: {fileID: -7047479118337076492}
+  - component: {fileID: 388930533132537497}
   m_Layer: 9
   m_Name: ElfGirl
   m_TagString: Elves
@@ -143,4 +144,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  scaredDist: 6
   fxPrefab: {fileID: 144926, guid: fcb242a204cb73e46bb764583d0bf1fa, type: 3}
+  santa: {fileID: 6502646895770333508, guid: 7aa16fc44966b4cf4a0d0e42798d3f67, type: 3}
+--- !u!95 &388930533132537497
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3480239616926546428}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eeb3ef494b74e429caa7879035220d3e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
