@@ -55,5 +55,13 @@ public class Elves : MonoBehaviour
             Vector2 nudge = new Vector2 (15f, 40f);
             rb2D.AddForce(nudge);
         }
+        else if (coll.collider.tag == "Santa") {
+            Debug.Log("Mmmmmm... elves");
+            animator.SetBool("eaten", true);
+            GameObject bloodFX = Instantiate(fxPrefab, transform.position, Quaternion.identity);
+            bloodFX.transform.parent = GameObject.Find("_Dynamic").transform;
+            Destroy(this.gameObject);
+            Destroy(bloodFX.gameObject, 3f);
+        }
     }
 }
