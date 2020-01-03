@@ -29,6 +29,7 @@ public class ItemSpawner : MonoBehaviour
             Vector3 spawnLocation = new Vector3 (14, Random.Range(-2f, 4f), 0);
             int spawnItemNum = Random.Range(0, itemPrefab.GetUpperBound(0)+1);
             GameObject newItem = Instantiate(itemPrefab[spawnItemNum], spawnLocation, Quaternion.identity);
+            newItem.transform.parent = this.gameObject.transform;
             spawnTarget += Random.Range(minSpawnTime, maxSpawnTime);      // set next spawn time target
 
             maxSpawnTime *= .95f;        // slowly decrease maxSpawnTime to spawn more items as the game progresses

@@ -27,9 +27,10 @@ public class Items : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D col) {
-        fxPrefab = Instantiate(fxPrefab, itemTfm.position, Quaternion.identity);
+        GameObject itemFX = Instantiate(fxPrefab, itemTfm.position, Quaternion.identity);
+        itemFX.transform.parent = GameObject.Find("_Dynamic").transform;
         Destroy(this.gameObject);
-        Destroy(fxPrefab, 3f);     // Destroy the fx gameObject after 3 seconds
+        Destroy(itemFX, 3f);     // Destroy the fx gameObject after 3 seconds
     }
 
     void OnBecameInvisible() {
