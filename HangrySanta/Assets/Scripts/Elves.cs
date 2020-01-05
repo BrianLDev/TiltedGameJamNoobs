@@ -52,8 +52,15 @@ public class Elves : MonoBehaviour
             // Destroy(fxPrefab, 3f);     // kill off the effect after 3 seconds
             // Destroy(this.gameObject);
 
-            Vector2 nudge = new Vector2 (15f, 40f);
-            rb2D.AddForce(nudge);
+            // NOTE: This is the nudge Velocity mechanic.  Trying out multiple options
+            if (hitFromAbove) {
+                if (hitFromLeft) {   this.transform.position += (Vector3.right * 1.1f);   }
+                else {   this.transform.position += (Vector3.left * 1.1f);   }
+            }
+            else {
+                // if (hitFromLeft) {   rb2D.velocity += Vector2.right;   }
+                // else {   rb2D.velocity += Vector2.right;   }
+            }
         }
         else if (coll.collider.tag == "Santa") {
             Debug.Log("Mmmmmm... elves");
