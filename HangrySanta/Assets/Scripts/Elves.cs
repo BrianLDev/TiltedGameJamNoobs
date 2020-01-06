@@ -6,9 +6,11 @@ public class Elves : MonoBehaviour
 {
     public float speed = 2f;
     public float scaredDist = 6f;
+    public int deathPoints = -100;
     public GameObject fxPrefab;
     public GameObject santa;
 
+    private GameManager gameManager;
     private Animator animator;
     private Rigidbody2D rb2D;
     private Vector2 forceToAdd;
@@ -17,6 +19,7 @@ public class Elves : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GetComponentInParent<GameManager>();
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -53,6 +56,8 @@ public class Elves : MonoBehaviour
             // Destroy(this.gameObject);
 
             // NOTE: This is the nudge Velocity mechanic.  Trying out multiple options
+            bool hitFromAbove = true;   // TODO: FIX THIS
+            bool hitFromLeft = true;    // TODO: FIX THIS
             if (hitFromAbove) {
                 if (hitFromLeft) {   this.transform.position += (Vector3.right * 1.1f);   }
                 else {   this.transform.position += (Vector3.left * 1.1f);   }
@@ -63,12 +68,17 @@ public class Elves : MonoBehaviour
             }
         }
         else if (coll.collider.tag == "Santa") {
+            Die();
+        }
+    }
+
+    private void Die() {
             Debug.Log("Mmmmmm... elves");
             animator.SetBool("eaten", true);
             GameObject bloodFX = Instantiate(fxPrefab, transform.position, Quaternion.identity);
             bloodFX.transform.parent = GameObject.Find("_Dynamic").transform;
             Destroy(this.gameObject);
             Destroy(bloodFX.gameObject, 3f);
-        }
+            gameManager.UpdateScore(deathPoints);
     }
 }
