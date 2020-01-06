@@ -6,7 +6,7 @@ public class Elves : MonoBehaviour
 {
     public float speed = 2f;
     public float scaredDist = 6f;
-    public int deathPoints = -100;
+
     public GameObject fxPrefab;
     public GameObject santa;
 
@@ -19,7 +19,7 @@ public class Elves : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GetComponentInParent<GameManager>();
+        gameManager = GameObject.FindObjectOfType<GameManager>();
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -79,6 +79,6 @@ public class Elves : MonoBehaviour
             bloodFX.transform.parent = GameObject.Find("_Dynamic").transform;
             Destroy(this.gameObject);
             Destroy(bloodFX.gameObject, 3f);
-            gameManager.UpdateScore(deathPoints);
+            gameManager.UpdateScore(gameManager.elfDeathPoints);
     }
 }

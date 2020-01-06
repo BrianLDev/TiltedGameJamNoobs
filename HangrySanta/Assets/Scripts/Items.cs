@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class Items : MonoBehaviour
 {
     public float speed = 0.07f;      // default to 0.07
-    public int itemPoints = 5;
-    public int poisonPoints = -10;
     public GameObject fxPrefab;
     private GameManager gameManager;
     
@@ -51,19 +49,19 @@ public class Items : MonoBehaviour
 
     private void AddPoints(Collider2D col) {
         if (col.tag == "Player") {
-            if (gameObject.tag == "poison") {
-                gameManager.UpdateScore(poisonPoints);
+            if (gameObject.tag == "Poison") {
+                gameManager.UpdateScore(gameManager.poisonPoints);
             }
             else {
-                gameManager.UpdateScore(itemPoints);
+                gameManager.UpdateScore(gameManager.itemPoints);
             }
         }
         if (col.tag == "Santa") {
-            if (gameObject.tag == "poison") {
-                gameManager.UpdateScore(-poisonPoints);
+            if (gameObject.tag == "Poison") {
+                gameManager.UpdateScore(Mathf.RoundToInt(gameManager.poisonPoints * -2.5f) );
             }
             else {
-                gameManager.UpdateScore(-itemPoints);
+                gameManager.UpdateScore(Mathf.RoundToInt(gameManager.itemPoints * -0.5f) );
             }
         }
     }
