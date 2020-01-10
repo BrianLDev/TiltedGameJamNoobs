@@ -51,6 +51,7 @@ public class Items : MonoBehaviour
         if (col.tag == "Player") {
             if (gameObject.tag == "Poison") {
                 gameManager.UpdateScore(gameManager.poisonPoints);
+                gameManager.PlayerHurt();
             }
             else {
                 gameManager.UpdateScore(gameManager.itemPoints);

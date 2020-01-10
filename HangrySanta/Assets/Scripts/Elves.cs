@@ -79,6 +79,5 @@ public class Elves : MonoBehaviour
             bloodFX.transform.parent = GameObject.Find("_Dynamic").transform;
             Destroy(this.gameObject);
             Destroy(bloodFX.gameObject, 3f);
-            gameManager.UpdateScore(gameManager.elfDeathPoints);
     }
 }

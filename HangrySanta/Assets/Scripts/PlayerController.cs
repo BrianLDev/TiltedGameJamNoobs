@@ -20,16 +20,17 @@ public class PlayerController : MonoBehaviour
 
     public void OnUse(InputAction.CallbackContext context) {
         // 'Use' code here.
-        Debug.Log(context);
+        // Debug.Log(context);
     }
 
     public void OnMove(InputAction.CallbackContext context) {
         // 'Move' code here.
-        Debug.Log(context);
+        // Debug.Log(context);
     }
 
     // Update is called once per frame
     void Update() {
+        // TODO: CONSOLIDATE THIS PLAYERCONTROLLER MOVEMENT WITH THE PLAYERINPUT NEW SYSTEM FROM UNITY
         if (Input.GetKeyDown(KeyCode.W) ) {  movingUp = true;  }
         if (Input.GetKeyDown(KeyCode.S) ) {  movingDown = true;  }
         if (Input.GetKeyDown(KeyCode.A) ) {  movingLeft = true;  }

@@ -9,6 +9,7 @@ TagManager:
   - Santa
   - Items
   - Poison
+  - Health
   layers:
   - Default
   - TransparentFX
