@@ -2127,7 +2127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPoints: 250
   poisonPoints: -500
-  scoreText: {fileID: 1593986644}
+  damage: 0.5
+  scoreTMPro: {fileID: 1593986644}
   healthContainer: {fileID: 1760513859}
 --- !u!1001 &1578110952
 PrefabInstance:

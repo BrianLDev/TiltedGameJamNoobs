@@ -15,8 +15,9 @@ MonoBehaviour:
   CategoryName: Menu Buttons
   DatabaseType: 0
   Names:
-  - Save the Elves!
   - Back
-  - Settings
+  - Next
   - Pause
   - Quit
+  - Save the Elves!
+  - Settings
