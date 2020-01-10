@@ -23,17 +23,27 @@ public class Santa : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D coll) {
         if (coll.tag == "Items") {
-            santaTfm.localScale *= growthMultiplier;
-            // santaTfm.localScale.Set(santaTfm.localScale.x * 1.5f, santaTfm.localScale.y, santaTfm.localScale.z);  // make him even wider
-            rb2D.mass *= growthMultiplier;
+            GetBigger();
         }
         if (coll.tag == "Poison") {
-            santaTfm.localScale *= shrinkMultiplier;
-            // santaTfm.localScale.Set(santaTfm.localScale.x * .5f, santaTfm.localScale.y, santaTfm.localScale.z);  // less wide
-            rb2D.mass *= shrinkMultiplier;
+            GetSmaller();
         }
         if (coll.tag == "Elves") {
             Debug.Log("DEAD ELF!!");
+            GetBigger();
+            GetBigger();    // doubleplus embiggening
         }
+    }
+
+    public void GetBigger() {
+        santaTfm.localScale *= growthMultiplier;
+        // santaTfm.localScale.Set(santaTfm.localScale.x * 1.5f, santaTfm.localScale.y, santaTfm.localScale.z);  // make him even wider
+        rb2D.mass *= growthMultiplier;
+    }
+
+    public void GetSmaller() {
+        santaTfm.localScale *= shrinkMultiplier;
+        // santaTfm.localScale.Set(santaTfm.localScale.x * .5f, santaTfm.localScale.y, santaTfm.localScale.z);  // less wide
+        rb2D.mass *= shrinkMultiplier;
     }
 }

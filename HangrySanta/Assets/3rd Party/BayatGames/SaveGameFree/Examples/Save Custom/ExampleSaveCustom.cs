@@ -28,12 +28,14 @@ namespace BayatGames.SaveGameFree.Examples
 
             public int score;
             public int highScore;
+            public bool loadOnStart;    // BL: Added this
             public List<Level> levels;
 
             public CustomData()
             {
                 score = 0;
                 highScore = 0;
+                loadOnStart = true;     // BL: Added this
 
                 // Dummy data
                 levels = new List<Level>() {
@@ -47,17 +49,18 @@ namespace BayatGames.SaveGameFree.Examples
         }
 
         public CustomData customData;
-        public bool loadOnStart = true;
         public InputField scoreInputField;
         public InputField highScoreInputField;
+        public Toggle loadOnStartToggle;    // BL: Added this
         public string identifier = "exampleSaveCustom";
 
         void Start()
         {
-            if (loadOnStart)
-            {
-                Load();
-            }
+        //     if (loadOnStart)
+        //     {
+        //         Load();
+        //     }
+            LoadOnStart();      // BL: Added this
         }
 
         public void SetScore(string score)
@@ -70,19 +73,44 @@ namespace BayatGames.SaveGameFree.Examples
             customData.highScore = int.Parse(highScore);
         }
 
+        public void SetLoadOnStart(bool isOn) {       // BL: Added this function
+            customData.loadOnStart = loadOnStartToggle.isOn;
+        }
+
         public void Save()
         {
+            Debug.Log("Saving...");
             SaveGame.Save<CustomData>(identifier, customData, SerializerDropdown.Singleton.ActiveSerializer);
         }
 
         public void Load()
         {
+            Debug.Log("Loading...");
             customData = SaveGame.Load<CustomData>(
                 identifier,
                 new CustomData(),
                 SerializerDropdown.Singleton.ActiveSerializer);
             scoreInputField.text = customData.score.ToString();
             highScoreInputField.text = customData.highScore.ToString();
+        }
+
+        public void LoadOnStart()   // BL: Added this function
+        {
+            Debug.Log("Checking to load on start...");
+            CustomData tempCustomData = SaveGame.Load<CustomData>(
+                identifier,
+                new CustomData(),
+                SerializerDropdown.Singleton.ActiveSerializer);
+            if (tempCustomData.loadOnStart) {   // only replace the score strings if loadOnStart true
+                Debug.Log("Loading data on start...");
+                customData = tempCustomData;
+                scoreInputField.text = customData.score.ToString();
+                highScoreInputField.text = customData.highScore.ToString();
+                loadOnStartToggle.isOn = customData.loadOnStart;
+            }
+            else {
+                Debug.Log("Not loading data on start...");
+            }
         }
 
     }

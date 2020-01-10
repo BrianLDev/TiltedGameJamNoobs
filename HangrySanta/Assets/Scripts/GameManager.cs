@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;  // to load scenes
+using Doozy.Engine;    // Doozy UI 
 using TMPro;    // TextMesh Pro
+using BayatGames.SaveGameFree.Types;    // to save score
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance = null;  // public instance of this GameManager that all scripts can access (singleton)
+    public enum GameState {MainMenu = 0, PlayingGame = 1, Paused = 3, GameOver = 4}
+    public GameState gameState = GameState.MainMenu;
     public int itemPoints = 250;
     public int poisonPoints = -500;
     public float damage = 0.5f;
@@ -17,8 +22,15 @@ public class GameManager : MonoBehaviour
     private int score;
 
     void Awake() {
-        DontDestroyOnLoad(this);
-        DontDestroyOnLoad(scoreTMPro);
+        if (instance == null)   // Check if instance already exists
+            instance = this;    // if not, set instance to this
+
+        else if (instance != this)  // If instance already exists and it's not this:
+            // Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
+            Destroy(gameObject);    
+
+        DontDestroyOnLoad(gameObject);  // Sets this to not be destroyed when reloading scene
+
     }
 
     // Start is called before the first frame update
@@ -47,6 +59,7 @@ public class GameManager : MonoBehaviour
     public void PlayerHurt() {
         foreach (SpriteRenderer cane in candyCanes) {
             if (cane.enabled == true) {
+                Debug.Log("Taking damage!!");
                 float alpha = cane.color.a;
                 alpha -= damage;   // each candy cane can be hurt 2 times for a total of 5 * 2 = 10 total health
                 health -= damage;
@@ -66,7 +79,11 @@ public class GameManager : MonoBehaviour
     }
 
     public void GameOver() {
-        SceneManager.LoadScene(2);      // loads the 3rd scene in the build order which is the gameover screen
+        Debug.Log("Game Over man...");
+        gameState = GameState.GameOver;
+        // TODO: Add save game logic here
+        // SaveGame​.​Save​<int>​ ​(​ ​"score"​,​ score ​);
+        GameEventMessage.SendEvent("GAMEOVER");
     }
 
 
