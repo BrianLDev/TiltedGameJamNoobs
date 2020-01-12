@@ -16,5 +16,5 @@ MonoBehaviour:
   DatabaseType: 2
   Names:
   - Unnamed
-  - GUIOverlay
-  - PauseOverlay
+  - GUIOverlay-OLD
+  - PauseOverlay-OLD

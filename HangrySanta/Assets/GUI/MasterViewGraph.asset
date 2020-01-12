@@ -233,21 +233,21 @@ MonoBehaviour:
   m_minimumOutputSocketsCount: 1
   m_graphId: 0d491b47-4722-426e-8778-72edce23f275
   m_id: b21ea221-5cb0-40db-9a58-512464cf9343
-  m_name: PauseOverlay View
+  m_name: Pause Overlay View
   m_notes: 
   m_onEnterShowViews:
-  - Category: General
+  - Category: Menu System
     InstantAction: 0
-    Name: GUIOverlay
-  - Category: General
+    Name: HUD Overlay
+  - Category: Menu System
     InstantAction: 0
-    Name: PauseOverlay
+    Name: Pause Overlay
   m_onEnterHideViews: []
   m_onExitShowViews: []
   m_onExitHideViews:
-  - Category: General
+  - Category: Menu System
     InstantAction: 0
-    Name: PauseOverlay
+    Name: Pause Overlay
 --- !u!114 &-7232415903636228178
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -620,10 +620,10 @@ MonoBehaviour:
   - m_connectionMode: 0
     m_connections:
     - m_inputConnectionPoint: {x: 202, y: 4}
-      m_outputConnectionPoint: {x: 202, y: 4}
-      m_id: 10963e76-20c5-4aa0-8339-02fd0a14611e
-      m_inputNodeId: dc9a0d8d-1981-4720-bd95-5a5d881b7cf5
-      m_inputSocketId: 96fef54f-7987-4fb0-a9df-3bf5acf9c127
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: a61cb0c4-310b-4515-b16d-df90b90366d3
+      m_inputNodeId: 81617490-17cd-45c0-b50f-14c697b91de0
+      m_inputSocketId: bd045bba-7632-413c-a6bd-3a18c993581d
       m_outputNodeId: 1a302e89-3f12-4cd0-b00c-fc4288a07c09
       m_outputSocketId: ec0446a9-13ea-4ff3-b2b3-9c044c4c8f83
     m_connectionPoints:
@@ -659,18 +659,18 @@ MonoBehaviour:
   m_minimumOutputSocketsCount: 1
   m_graphId: 0d491b47-4722-426e-8778-72edce23f275
   m_id: 1a302e89-3f12-4cd0-b00c-fc4288a07c09
-  m_name: GUIOverlay View
+  m_name: HUD Overlay View
   m_notes: 
   m_onEnterShowViews:
-  - Category: General
+  - Category: Menu System
     InstantAction: 0
-    Name: GUIOverlay
+    Name: HUD Overlay
   m_onEnterHideViews: []
   m_onExitShowViews: []
   m_onExitHideViews:
-  - Category: General
+  - Category: Menu System
     InstantAction: 0
-    Name: GUIOverlay
+    Name: HUD Overlay
 --- !u!114 &-2575345181638728617
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -789,12 +789,11 @@ MonoBehaviour:
   - {fileID: -3395490739236416788}
   - {fileID: 5164739317576135637}
   - {fileID: -7266851626983306306}
-  - {fileID: -6284391667414661478}
   m_isSubGraph: 0
   m_version: 1
   m_description: 
   m_id: 0d491b47-4722-426e-8778-72edce23f275
-  m_lastModified: 132231624911497430
+  m_lastModified: 132232647753646150
 --- !u!114 &132128543186545392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1117,11 +1116,11 @@ MonoBehaviour:
     m_connections:
     - m_inputConnectionPoint: {x: 202, y: 4}
       m_outputConnectionPoint: {x: -2, y: 4}
-      m_id: ca0ae6ff-557c-4dbe-973c-b7fca0478ab5
+      m_id: a61cb0c4-310b-4515-b16d-df90b90366d3
       m_inputNodeId: 81617490-17cd-45c0-b50f-14c697b91de0
       m_inputSocketId: bd045bba-7632-413c-a6bd-3a18c993581d
-      m_outputNodeId: dc9a0d8d-1981-4720-bd95-5a5d881b7cf5
-      m_outputSocketId: 67d1adc0-f7b3-4e63-aded-ea470f477ff4
+      m_outputNodeId: 1a302e89-3f12-4cd0-b00c-fc4288a07c09
+      m_outputSocketId: ec0446a9-13ea-4ff3-b2b3-9c044c4c8f83
     m_connectionPoints:
     - {x: -2, y: 4}
     - {x: 202, y: 4}
@@ -1176,8 +1175,8 @@ MonoBehaviour:
   m_useUpdate: 0
   m_height: 128
   m_width: 216
-  m_x: 768
-  m_y: 324
+  m_x: 852
+  m_y: 312
   m_minimumInputSocketsCount: 1
   m_minimumOutputSocketsCount: 1
   m_graphId: 0d491b47-4722-426e-8778-72edce23f275

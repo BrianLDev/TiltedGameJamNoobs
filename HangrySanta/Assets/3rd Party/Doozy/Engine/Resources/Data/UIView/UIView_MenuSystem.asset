@@ -20,3 +20,5 @@ MonoBehaviour:
   - Quit Menu
   - Settings Menu
   - Game Over Menu
+  - HUD Overlay
+  - Pause Overlay

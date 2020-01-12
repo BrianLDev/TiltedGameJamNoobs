@@ -46,14 +46,14 @@ MonoBehaviour:
   - {fileID: -8990966865287836950, guid: 40e09fafd1af94a41b9c3771d6159be1, type: 2}
   - {fileID: -7232415903636228178, guid: 40e09fafd1af94a41b9c3771d6159be1, type: 2}
   - {fileID: -8076307881303558281, guid: 40e09fafd1af94a41b9c3771d6159be1, type: 2}
-  SelectedNodes:
   - {fileID: -6284391667414661478, guid: 40e09fafd1af94a41b9c3771d6159be1, type: 2}
+  SelectedNodes: []
   GraphTabs:
   - IsRootTab: 1
     Graph: {fileID: 11400000, guid: 40e09fafd1af94a41b9c3771d6159be1, type: 2}
     SubGraphNode: {fileID: 0}
-    Zoom: 0.6
-    PanOffset: {x: 349.39996, y: 321.09998}
+    Zoom: 0.9
+    PanOffset: {x: 410.5007, y: 316.25705}
     SelectedNodes: []
     DeletedNodes: []
   CurrentView: 1
