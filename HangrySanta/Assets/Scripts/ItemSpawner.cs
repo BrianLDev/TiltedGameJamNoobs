@@ -23,19 +23,22 @@ public class ItemSpawner : MonoBehaviour
     
     void FixedUpdate()
     {
+        if (GameManager.instance.gameState == GameManager.GameState.PlayingGame) {
         elapsedTime += Time.deltaTime;
 
-        if (elapsedTime >= spawnTarget) {
-            Vector3 spawnLocation = new Vector3 (14, Random.Range(-2f, 4f), 0);
-            int spawnItemNum = Random.Range(0, itemPrefab.GetUpperBound(0)+1);
-            GameObject newItem = Instantiate(itemPrefab[spawnItemNum], spawnLocation, Quaternion.identity);
-            newItem.transform.parent = this.gameObject.transform;
-            spawnTarget += Random.Range(minSpawnTime, maxSpawnTime);      // set next spawn time target
+            if (elapsedTime >= spawnTarget) {
+                Vector3 spawnLocation = new Vector3 (14, Random.Range(-2f, 4f), 0);
+                int spawnItemNum = Random.Range(0, itemPrefab.GetUpperBound(0)+1);
+                GameObject newItem = Instantiate(itemPrefab[spawnItemNum], spawnLocation, Quaternion.identity);
+                newItem.transform.parent = this.gameObject.transform;
+                spawnTarget += Random.Range(minSpawnTime, maxSpawnTime);      // set next spawn time target
 
-            maxSpawnTime *= .95f;        // slowly decrease maxSpawnTime to spawn more items as the game progresses
-            minSpawnTime *= .98f;        // slowly decrease minSpawnTime to spawn more items as the game progresses
-            minSpawnTime = minSpawnTime <= baseMinSpawnTime ? baseMinSpawnTime : minSpawnTime;    // no lower than .2f
-            maxSpawnTime = maxSpawnTime <= minSpawnTime ? minSpawnTime : maxSpawnTime;
+                maxSpawnTime *= .95f;        // slowly decrease maxSpawnTime to spawn more items as the game progresses
+                minSpawnTime *= .98f;        // slowly decrease minSpawnTime to spawn more items as the game progresses
+                minSpawnTime = minSpawnTime <= baseMinSpawnTime ? baseMinSpawnTime : minSpawnTime;    // no lower than .2f
+                maxSpawnTime = maxSpawnTime <= minSpawnTime ? minSpawnTime : maxSpawnTime;
+            }
         }
     }
+    
 }

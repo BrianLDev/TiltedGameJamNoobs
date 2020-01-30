@@ -18,8 +18,8 @@ public class GameManager : MonoBehaviour
     public GameObject healthContainer;
     private SpriteRenderer[] candyCanes;
     private float health;
-
     private int score;
+    private GameEventListener gameEventListener;    //  TODO: figure out how to get this to listen for STARTGAME
 
     void Awake() {
         if (instance == null)   // Check if instance already exists
@@ -30,7 +30,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);    
 
         DontDestroyOnLoad(gameObject);  // Sets this to not be destroyed when reloading scene
-
     }
 
     // Start is called before the first frame update

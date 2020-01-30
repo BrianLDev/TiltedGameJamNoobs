@@ -45,6 +45,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2646,7 +2647,6 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 2
   TextLabel: {fileID: 0}
-  TextMeshProLabel: {fileID: 0}
 --- !u!1 &1931941440315049414
 GameObject:
   m_ObjectHideFlags: 0
@@ -5058,7 +5058,6 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 2
   TextLabel: {fileID: 0}
-  TextMeshProLabel: {fileID: 0}
 --- !u!1 &1931941440644429268
 GameObject:
   m_ObjectHideFlags: 0
@@ -8684,7 +8683,6 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 2
   TextLabel: {fileID: 0}
-  TextMeshProLabel: {fileID: 1931941441254525477}
 --- !u!1 &1931941440831203149
 GameObject:
   m_ObjectHideFlags: 0
@@ -8701,7 +8699,7 @@ GameObject:
   - component: {fileID: 1931941440831203144}
   - component: {fileID: 1931941440831203147}
   m_Layer: 0
-  m_Name: View - GUIOverlay
+  m_Name: View - HUD Overlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9379,8 +9377,8 @@ MonoBehaviour:
   UpdateHideProgressorOnShow: 0
   UpdateShowProgressorOnHide: 0
   UseCustomStartAnchoredPosition: 1
-  ViewCategory: General
-  ViewName: GUIOverlay
+  ViewCategory: Menu System
+  ViewName: HUD Overlay
 --- !u!222 &1931941440831203144
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13188,7 +13186,6 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 2
   TextLabel: {fileID: 0}
-  TextMeshProLabel: {fileID: 0}
 --- !u!1 &1931941441254525479
 GameObject:
   m_ObjectHideFlags: 0
@@ -13389,6 +13386,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15835,7 +15833,6 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 2
   TextLabel: {fileID: 0}
-  TextMeshProLabel: {fileID: 0}
 --- !u!1 &1931941441319624481
 GameObject:
   m_ObjectHideFlags: 0
@@ -18683,7 +18680,6 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 2
   TextLabel: {fileID: 0}
-  TextMeshProLabel: {fileID: 0}
 --- !u!1 &1931941441512911029
 GameObject:
   m_ObjectHideFlags: 0
@@ -18729,6 +18725,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -21330,7 +21327,6 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 2
   TextLabel: {fileID: 0}
-  TextMeshProLabel: {fileID: 0}
 --- !u!1 &1931941441546570328
 GameObject:
   m_ObjectHideFlags: 0
@@ -21376,6 +21372,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -21496,6 +21493,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -24252,7 +24250,6 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 2
   TextLabel: {fileID: 0}
-  TextMeshProLabel: {fileID: 0}
 --- !u!1 &1931941442125750227
 GameObject:
   m_ObjectHideFlags: 0
@@ -24269,7 +24266,7 @@ GameObject:
   - component: {fileID: 1931941442125750238}
   - component: {fileID: 1931941442125750225}
   m_Layer: 0
-  m_Name: View - PauseOverlay
+  m_Name: View - Pause Overlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25107,8 +25104,8 @@ MonoBehaviour:
   UpdateHideProgressorOnShow: 0
   UpdateShowProgressorOnHide: 0
   UseCustomStartAnchoredPosition: 1
-  ViewCategory: General
-  ViewName: PauseOverlay
+  ViewCategory: Menu System
+  ViewName: Pause Overlay
 --- !u!222 &1931941442125750238
 CanvasRenderer:
   m_ObjectHideFlags: 0
