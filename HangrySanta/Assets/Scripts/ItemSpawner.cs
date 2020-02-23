@@ -17,7 +17,8 @@ public class ItemSpawner : MonoBehaviour
             // Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
             Destroy(gameObject);    
 
-        DontDestroyOnLoad(gameObject);  // Sets this to not be destroyed when reloading scene
+        // TODO: replace this with events once I figure out how they work in Unity
+        GameManager.instance.gameState = GameManager.GameState.PlayingGame; // since ItemSpawner is only on the 01-Main level, will only spawn items then
     }
 
     // Start is called before the first frame update
