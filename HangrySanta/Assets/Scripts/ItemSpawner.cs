@@ -4,9 +4,21 @@ using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour
 {
+    public static ItemSpawner instance = null;  // public instance of this GameManager that all scripts can access (singleton)
     public GameObject[] itemPrefab = new GameObject[11];
     private float elapsedTime;
     private float spawnTarget, minSpawnTime, maxSpawnTime, baseMinSpawnTime;
+
+    void Awake() {
+        if (instance == null)   // Check if instance already exists
+            instance = this;    // if not, set instance to this
+
+        else if (instance != this)  // If instance already exists and it's not this:
+            // Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
+            Destroy(gameObject);    
+
+        DontDestroyOnLoad(gameObject);  // Sets this to not be destroyed when reloading scene
+    }
 
     // Start is called before the first frame update
     void Start()
