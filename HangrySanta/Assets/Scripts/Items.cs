@@ -13,7 +13,7 @@ public class Items : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GetComponentInParent<GameManager>();
+        gameManager = GameManager.instance;
         itemTfm = GetComponent<Transform>();
     }
 
