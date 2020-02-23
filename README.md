@@ -10,7 +10,7 @@ The object of the game is to make sure Santa doesn't eat the elves, and also mak
 ***
 Originally created for the Tilted Game Jam Orange County on 12-21-2019 by a rag tag team of Game Jam free agents of varying skill levels and talents.  
 
-75% of the team was new to Unity, new to git, and new to Game Jams, so our goal was just to have fun with it and learn a few things along the way.
+Most of the team was new to Unity, new to git, and new to Game Jams, so our goal was just to have fun with it and learn a few things along the way.
 
 Continued to improve the game after the game jam so that we could all have a completed and working game under our belts.
 ***
