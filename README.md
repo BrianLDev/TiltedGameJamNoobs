@@ -17,13 +17,15 @@ Continued to improve the game after the game jam so that we could all have a com
 
 ## Game Jam Themes
 
+The game needs to incorporate these two words in some way:
+
 - Eating
 - Elves
 
 ## Team (Tilted Game Jam Noobs)
 
-- Brian - Game Design, Environment Design, Game Mechanics, Game Programming
+- Brian - Programming, Unity Wrangling, Game Design
 - Sweetpea - Art Design: Santa and signs
 - Little Gemings - Art Design: Rudolph, Elves, and Items
-- Nolan - Learning
+- Nolan - Learning, Game Design
 - Bandit - Mascot
